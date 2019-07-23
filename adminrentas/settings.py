@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'adminrentas.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'admin-rentas',
+        'HOST': 'mongodb+srv://root-admin-rentas:Adm1nR3nt4sG4lv4n@adminrentas-dzh4n.mongodb.net/admin-rentas?retryWrites=true&w=majority',
+        'USER': 'root-admin-rentas',
+        'PASSWORD': 'Adm1nR3nt4sG4lv4n',
     }
 }
 
