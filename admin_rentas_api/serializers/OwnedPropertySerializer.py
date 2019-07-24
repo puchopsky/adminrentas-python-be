@@ -6,7 +6,7 @@ from rest_framework_mongoengine.fields import ObjectIdField
 # Serializers define the API representation.
 class OwnedPropertySerializer(serializers.ModelSerializer):
 
-    _id = ObjectIdField()
+    _id = ObjectIdField(required=False)
 
     class Meta:
         model = OwnedProperty
