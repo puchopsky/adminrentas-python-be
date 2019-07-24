@@ -81,6 +81,7 @@ DATABASES = {
         'HOST': 'mongodb+srv://root-admin-rentas:Adm1nR3nt4sG4lv4n@adminrentas-dzh4n.mongodb.net/admin-rentas?retryWrites=true&w=majority',
         'USER': 'root-admin-rentas',
         'PASSWORD': 'Adm1nR3nt4sG4lv4n',
+        'ENFORCE_SCHEMA': False
     }
 }
 
