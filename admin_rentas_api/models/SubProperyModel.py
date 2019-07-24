@@ -1,7 +1,7 @@
 from djongo import models
 
 
-class CharacteristicsModel(models.Model):
+class Characteristics(models.Model):
 
     amount = models.DecimalField(max_digits=8, decimal_places=2)
     characteristic = models.CharField(max_length=200)
@@ -10,15 +10,17 @@ class CharacteristicsModel(models.Model):
         abstract = True
 
 
-class SubPropertyModel(models.Model):
+class SubProperty(models.Model):
 
+    _id = models.ObjectIdField()
     subproperty_alias = models.CharField(max_length=200)
     rent_price = models.DecimalField(max_digits=8, decimal_places=2)
     characteristics = models.EmbeddedModelField(
-        model_container=CharacteristicsModel
+        model_container=Characteristics
     )
     billing_period = models.IntegerField()  # in days
     belongsTo = models.CharField(max_length=200)
+    objects = models.DjongoManager()
 
     def __str__(self):
         string_value = f'Sub  Property Alias{self.subproperty_alias}' \

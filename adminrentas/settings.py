@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'admin_rentas_api',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,7 @@ DATABASES = {
         'HOST': 'mongodb+srv://root-admin-rentas:Adm1nR3nt4sG4lv4n@adminrentas-dzh4n.mongodb.net/admin-rentas?retryWrites=true&w=majority',
         'USER': 'root-admin-rentas',
         'PASSWORD': 'Adm1nR3nt4sG4lv4n',
-        'ENFORCE_SCHEMA': False
+        'ENFORCE_SCHEMA': True
     }
 }
 
@@ -129,5 +130,7 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }

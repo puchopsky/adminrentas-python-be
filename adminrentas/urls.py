@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
-from django.contrib.auth.models import User
-from rest_framework import routers, serializers, viewsets
+from rest_framework import routers
 from .views.UserViewSet import UserViewSet
+
 
 
 # Routers provide an easy way of automatically determining the URL conf.
@@ -29,4 +29,5 @@ router.register(r'users', UserViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls')),
+    url('api/', include('admin_rentas_api.urls'))
 ]
