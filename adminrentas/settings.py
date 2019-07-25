@@ -37,7 +37,7 @@ SECRET_KEY = 'd(1cix^-z2mfq-m9pklrnaihclite@$*@k84$sgkb)57zfspm@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['adminrentas-be.herokuapp.com']
 
 
 # Application definition
