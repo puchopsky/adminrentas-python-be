@@ -17,6 +17,7 @@ djangorestframework-simplejwt = "*"
 djongo = "*"
 whitenoise = "*"
 django-rest-framework-mongoengine = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
